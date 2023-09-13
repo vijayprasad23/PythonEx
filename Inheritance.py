@@ -82,3 +82,20 @@ c1.setFilled(True)
 print('Is Circle r1 filled ? ', c1.getFilled())
 c1.setColor('pink')
 print('Color of Cirlce r1: ', c1.getColor())
+
+
+'''In Python, we use super() function to call the parent class methods. 
+So the above code calls Shape class's __init__() method. 
+This is required to set the values of attributes in the parent class. 
+Otherwise, when you try to access values of attributes defined in parent class using getter 
+or setter methods, you will get an error.
+
+Similarly, we have defined a Circle class. Just like Rectangle, it extends the Shape class 
+and adds few attributes and methods of its own.
+
+The code in lines 65-84, creates Rectangle and Circle object and then calls get_area(), 
+get_perimeter(), get_filled(), get_color(), set_color() and set_filled() 
+methods on these objects one by one. 
+Notice how we are able to call methods which are defined in the same class, 
+as well as methods which are defined on the parent class.
+'''
